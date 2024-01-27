@@ -1,0 +1,48 @@
+@import "@/styles/_variables.scss";
+
+.achivesSection {
+  width: 100%;
+  margin-bottom: var(--space-xxxl, $space-xxxl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    margin-bottom: var(--space-md, $space-md);
+    text-align: center;
+    white-space: pre-line;
+  }
+
+  .achives {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: var(--corner-md, $corner-md);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 6px -2px rgba(29, 41, 52, 0.24);
+
+    .achive {
+      padding: var(--space-md, $space-md) var(--space-xl, $space-xl);
+      display: flex;
+      gap: var(--space-md, $space-md);
+
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      }
+
+      .percent {
+        color: var(--text-secondary-color, $text-secondary-color);
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 40px;
+      }
+
+      .text {
+        color: var(--text-secondary-color, $text-secondary-color);
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+      }
+    }
+  }
+}

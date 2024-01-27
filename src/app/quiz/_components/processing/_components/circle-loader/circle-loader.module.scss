@@ -1,0 +1,7 @@
+.wrapper {
+  transform: rotate(-90deg);
+
+  .progressRing {
+    transition: stroke-dashoffset 0.2s ease-out;
+  }
+}

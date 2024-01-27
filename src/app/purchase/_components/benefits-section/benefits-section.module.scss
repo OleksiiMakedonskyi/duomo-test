@@ -1,0 +1,39 @@
+@import "@/styles/_variables.scss";
+
+.benefitsSection {
+  width: 100%;
+  margin-bottom: var(--space-xxxl, $space-xxxl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    margin-bottom: var(--space-md, $space-md);
+    text-align: center;
+    white-space: pre-line;
+  }
+
+  .benefits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: var(--corner-md, $corner-md);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 6px -2px rgba(29, 41, 52, 0.24);
+
+    .benefit {
+      padding: var(--space-md, $space-md) var(--space-xl, $space-xl);
+      display: flex;
+      gap: var(--space-md, $space-md);
+
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      }
+
+      p {
+        color: var(--text-secondary-color, $text-secondary-color);
+        font-weight: 500;
+      }
+    }
+  }
+}

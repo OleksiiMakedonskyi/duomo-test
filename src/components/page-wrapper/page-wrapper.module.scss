@@ -1,0 +1,30 @@
+@use '@/styles/_breakpoints.scss';
+
+@import '@/styles/_variables.scss';
+
+.page {
+
+  @include breakpoints.tablet {
+    padding-top: var(--header-height-desktop, $header-height-desktop);
+  }
+
+  padding: var(--header-height-mobile, $header-height-mobile) var(--space-xl, $space-xl) var(--space-xl, $space-xl);
+
+  .children {
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+  }
+}
+
+.fullPageHeight {
+  height: 100dvh;
+
+  .children {
+    height: calc(100dvh - var(--header-height-mobile, $header-height-mobile));
+
+    @include breakpoints.tablet {
+      height: calc(100dvh - var(--header-height-desktop, $header-height-desktop));
+    }
+  }
+}

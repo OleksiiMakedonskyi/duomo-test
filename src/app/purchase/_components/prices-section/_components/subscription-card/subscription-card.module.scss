@@ -1,0 +1,79 @@
+@import "@/styles/variables";
+
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid var(--background-color, $background-color);
+  border-radius: var(--corner-md, $corner-md);
+  background-color: var(--color-ui-100, $color-ui-100);
+  color: var(--color-ui-600, $color-ui-600);
+
+  .isMostPopular {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-ui-600, $color-ui-600);
+    border-radius: 8px 8px 0 0;
+
+    span {
+      padding: var(--space-xs, $space-xs) var(--space-md, $space-md);
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 16px;
+      text-align: center;
+      color: var(--text-inverted-color, $text-inverted-color);
+    }
+  }
+
+  .content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-lg, $space-lg);
+
+    .namePart {
+      display: flex;
+
+      .name {
+        margin: 0 var(--space-md, $space-md);
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+      }
+    }
+
+    .pricePart {
+      padding: var(--space-sm, $space-sm) var(--space-md, $space-md);
+      background-color: var(--color-ui-200, $color-ui-200);
+      border-radius: var(--corner-sm, $corner-sm);
+      display: flex;
+      gap: var(--space-xs, $space-xs);
+
+      .currency {
+        font-weight: 700;
+        line-height: 20px
+      }
+
+      .price {
+        font-size: 48px;
+        font-weight: 800;
+        line-height: 40px;
+      }
+    }
+  }
+}
+
+.isActive {
+  border: 2px solid var(--color-brand-primary, $color-brand-primary);
+  background-color: var(--background-color, $background-color);
+
+  .isMostPopular {
+    background-color: var(--color-brand-primary, $color-brand-primary);
+    border-radius: 4px 4px 0 0;
+  }
+}

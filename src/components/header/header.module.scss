@@ -1,0 +1,47 @@
+@use '@/styles/_breakpoints.scss';
+
+@import '@/styles/_variables.scss';
+
+.quizHeader {
+  @include breakpoints.tablet {
+    height: var(--header-height-desktop, $header-height-desktop);
+  }
+
+  pointer-events: auto;
+  position: fixed;
+  z-index: var(--z-index-header, $z-index-header);
+  inset: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1024px;
+  height: var(--header-height-mobile, $header-height-mobile);
+  margin: 0 auto;
+  padding: 0 var(--space-lg, $space-lg);
+  background-color: var(--background-color, $background-color);
+}
+
+.button {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  background-color: var(--background-color, $background-color);
+  border-radius: var(--corner-md, $corner-md);
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--color-ui-100, $color-ui-100);
+  }
+}
+
+.logoCentered {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}

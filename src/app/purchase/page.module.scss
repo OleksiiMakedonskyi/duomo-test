@@ -1,0 +1,11 @@
+@import "@/styles/_variables.scss";
+
+.container {
+  margin: 0 auto;
+  max-width: 342px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: var(--space-xxxl, $space-xxxl);
+}

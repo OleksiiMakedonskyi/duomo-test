@@ -1,0 +1,30 @@
+@import "@/styles/_variables.scss";
+
+.pricesSection {
+  width: 100%;
+  margin-bottom: var(--space-xxxl, $space-xxxl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    margin-bottom: var(--space-xl, $space-xl);
+    text-align: center;
+    white-space: pre-line;
+  }
+
+  .subscriptionsList {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: var(--space-sm, $space-sm);
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-lg, $space-lg);
+
+    li {
+      width: 100%;
+    }
+  }
+}
